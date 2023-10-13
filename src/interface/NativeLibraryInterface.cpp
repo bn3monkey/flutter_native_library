@@ -1,0 +1,4 @@
+#ifndef __NATIVE_LIBRARY_INTERFACE__
+#define __NATIVE_LIBRARY_INTERFACE__
+
+#endif
