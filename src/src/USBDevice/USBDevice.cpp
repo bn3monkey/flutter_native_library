@@ -5,17 +5,17 @@
 using namespace NativeLibrary;
 
 #ifdef _WIN32
-bool USBDevice::initialize(HWND handle)
+int32_t USBDevice::initialize(HWND handle)
 {
     Bn3Monkey::Log::D(__FUNCTION__, "USB Device(Windows) is initialized");
 }
 #elif __ANDROID__
-bool USBDevice::initialize(void* handle)
+int32_t USBDevice::initialize(void* handle)
 {
     Bn3Monkey::Log::D(__FUNCTION__, "USB Device(Android) is initialized");
 }
 #else
-bool USBDevice::initialize()
+int32_t USBDevice::initialize()
 {
     Bn3Monkey::Log::D(__FUNCTION__, "USB Device(Linux) is initialized");
 }

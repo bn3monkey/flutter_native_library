@@ -8,6 +8,7 @@ namespace NativeLibrary
 {
     class Result
     {
+    public:
         enum class Cause : int32_t
         {
             SUCCESS,
@@ -19,21 +20,22 @@ namespace NativeLibrary
             LENGTH,
         };
 
-        static inline char* messages[static_cast<size_t>(Cause::LENGTH)] {
-            "SUCCESS",
-
-        };
-
-        const Cause num;
-        const char* msg;
-
-    public:
         static inline int32_t getErrorNo(const Result::Cause& cause) {
             return static_cast<int32_t>(cause);
         }
         Result(int32_t num) : num(static_cast<Cause>(num)), msg(messages[num]) {
 
         }
+
+        
+        const Cause num;
+        const char* msg;
+
+    private:
+        static inline char* messages[static_cast<size_t>(Cause::LENGTH)] {
+            "SUCCESS",
+
+        };
     };
 }
 #endif

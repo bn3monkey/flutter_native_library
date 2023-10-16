@@ -7,7 +7,7 @@
 
 using namespace NativeLibrary;
 
-int Image::initialize()
+int32_t Image::initialize()
 {
     Bn3Monkey::Log::D(__FUNCTION__, "Image is initialized");
     _is_initialized = true;
