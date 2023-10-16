@@ -11,7 +11,7 @@ namespace NativeLibrary
         void release();
         bool isInitialized();
 
-        const char* getNativeLibraryErrorInformation(int32_t_err_no);
+        const char* getNativeLibraryErrorInformation(int32_t err_no);
 
         void registerOnError(void (*onError)(int err_num, const char* err_str));
         void registerOnLoading(void (*onLoading)(bool is_loading));
