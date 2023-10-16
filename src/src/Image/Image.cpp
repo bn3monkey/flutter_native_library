@@ -1,13 +1,17 @@
 #include "../../include/Image/Image.hpp"
+#include "../../include/Result/Result.hpp"
+
 #include <cstring>
 #include <Log/Log.hpp>
 
+
 using namespace NativeLibrary;
 
-bool Image::initialize()
+int Image::initialize()
 {
     Bn3Monkey::Log::D(__FUNCTION__, "Image is initialized");
     _is_initialized = true;
+    return Result::getErrorNo(Result::Cause::SUCCESS);
 }
 void Image::release()
 {

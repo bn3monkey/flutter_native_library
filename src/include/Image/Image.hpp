@@ -7,7 +7,7 @@ namespace NativeLibrary
 {
     class Image
     {
-        bool initialize();
+        int initialize();
         void release();
 
         void resize(size_t width, size_t height);

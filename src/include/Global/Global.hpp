@@ -7,7 +7,7 @@ namespace NativeLibrary
 {
     namespace Global
     {
-        bool initialize(int32_t arg1, char* arg2, float arg3, int64_t arg4);
+        int initialize(int32_t arg1, char* arg2, float arg3, int64_t arg4);
         void release();
         bool isInitialized();
 

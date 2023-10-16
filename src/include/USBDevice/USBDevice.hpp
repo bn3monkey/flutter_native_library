@@ -1,5 +1,5 @@
-#ifndef __FLUTTER_NATIVE_LIBRARY_IMAGE__
-#define __FLUTTER_NATIVE_LIBRARY_IMAGE__
+#ifndef __FLUTTER_NATIVE_LIBRARY_USBDEVICE__
+#define __FLUTTER_NATIVE_LIBRARY_USBDEVICE__
 
 #include <cstdint>
 #ifdef _WIN32
@@ -13,11 +13,11 @@ namespace NativeLibrary
     {
     public:
 #ifdef _WIN32
-        bool initialize(HWND handle);
+        int initialize(HWND handle);
 #elif __ANDROID__
-        bool initialize(void* handle);
+        int initialize(void* handle);
 #else
-        bool initialize();
+        int initialize();
 #endif
 
         void release();
