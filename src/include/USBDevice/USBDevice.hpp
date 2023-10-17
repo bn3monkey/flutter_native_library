@@ -12,19 +12,11 @@ namespace NativeLibrary
     class USBDevice
     {
     public:
-#ifdef _WIN32
-        int initialize(HWND handle);
-#elif __ANDROID__
         int initialize(void* handle);
-#else
-        int initialize();
-#endif
-
         void release();
 
-#ifdef _WIN32
         int32_t handleMessage(UINT const message, WPARAM const wparam, LPARAM const lparam);
-#endif
+
         bool detectConnection();
         void ignoreConnection();
 
